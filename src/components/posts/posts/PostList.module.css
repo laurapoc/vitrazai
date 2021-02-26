@@ -1,0 +1,12 @@
+.PostList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: calc(100% - 2%);
+    /* overflow: hidden; */
+}
+
+.PostList li {
+   height: 30vh;
+
+}

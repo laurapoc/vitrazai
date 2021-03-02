@@ -18,7 +18,7 @@ export default class PostList extends Component {
 
   render() {
     // first time renders empty array. How to prevent it (or shoud I prevent this)?
-    console.log(this.state.posts);
+    // console.log(this.state.posts);
     const postList = this.state.posts.map((post) => (
       <li key={post.id}>
         <Post

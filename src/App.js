@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import "./App.css";
 import MainContainer from "./containers/MainContainer";
 import PostList from "./components/posts/posts/PostList";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   let routes = (
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navigation />
       <Suspense>{routes}</Suspense>
     </div>
   );

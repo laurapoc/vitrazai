@@ -1,0 +1,10 @@
+.Imageslide {
+  width: 80%;
+  margin: 0 auto;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+.Imageslide .image-gallery-play-button {
+    bottom: 100px;
+}

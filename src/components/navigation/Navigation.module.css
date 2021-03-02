@@ -1,0 +1,17 @@
+.nav {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    background-color: rgb(94, 86, 86);
+}
+
+
+
+@media (min-width: 500px) {
+    .nav {
+        flex-flow: row;
+    }
+}

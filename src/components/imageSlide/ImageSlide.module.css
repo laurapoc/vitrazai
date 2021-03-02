@@ -1,8 +1,9 @@
 .Imageslide {
   width: 80%;
   margin: 0 auto;
-  max-height: 50vh;
+  max-height: 35vh;
   overflow: hidden;
+  margin-top: 2%;
 }
 
 .Imageslide .image-gallery-play-button {

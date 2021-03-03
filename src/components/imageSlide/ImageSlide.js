@@ -18,10 +18,8 @@ export default class ImageSlide extends Component {
   }
 
   render() {
-    console.log(this.state.posts);
     // create image slide source object array from fetched data:
     let imageSources = this.state.posts.map((post) => {
-      console.log(post.media_details.sizes.thumbnail.source_url);
       return {
         original: post.source_url,
         thumbnail: post.media_details.sizes.thumbnail.source_url,

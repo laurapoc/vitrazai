@@ -1,0 +1,23 @@
+.Imageslide {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.image-gallery-slides {
+    max-height: 300px;
+}
+
+
+
+@media screen and (min-width: 1300px) {
+  .image-gallery-play-button {
+    left: 18%
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .image-gallery-slides {
+        max-height: 200px;
+    }
+  }

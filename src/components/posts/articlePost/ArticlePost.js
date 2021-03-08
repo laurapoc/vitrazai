@@ -14,7 +14,15 @@ export default class ArticlePost extends Component {
         {content.length > this.props.maxLength ? (
           <div>
             {`${content.substring(0, this.props.maxLength)}...`}
-            <Link to="/full-article"> Read more</Link>
+
+            <Link
+              to={{
+                pathname: "/full-article",
+                state: { title: title, content: content },
+              }}
+            >
+              Read more
+            </Link>
           </div>
         ) : (
           <p>{content}</p>

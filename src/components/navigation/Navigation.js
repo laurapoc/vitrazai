@@ -8,7 +8,7 @@ const Navigation = () => {
       <NavigationItem link="/" exact>
         HOME
       </NavigationItem>
-      <NavigationItem link="/posts">POSTS</NavigationItem>
+      <NavigationItem link="/media-posts">POSTS</NavigationItem>
     </ul>
   );
 };

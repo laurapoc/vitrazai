@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { Component } from "react";
-import Post from "../post/Post";
+import Post from "../mediaPost/MediaPost";
 
-import classes from "./PostList.module.css";
+import classes from "./MediaPostList.module.css";
 
-export default class PostList extends Component {
+export default class MediaPostList extends Component {
   state = {
     posts: [],
   };
@@ -31,7 +31,7 @@ export default class PostList extends Component {
       <div>
         <h2>This is PostList.js component</h2>
 
-        <ul className={classes.PostList} style={{ listStyle: "none" }}>
+        <ul className={classes.MediaPostList} style={{ listStyle: "none" }}>
           {postList}
         </ul>
       </div>

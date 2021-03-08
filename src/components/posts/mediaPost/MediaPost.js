@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Post extends Component {
+export default class MediaPost extends Component {
     render() {
         return (
             <div>

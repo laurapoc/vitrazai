@@ -4,14 +4,14 @@ import { Suspense } from "react";
 
 import "./App.css";
 import MainContainer from "./containers/MainContainer";
-import PostList from "./components/posts/posts/PostList";
+import MediaPostList from "./components/posts/MediaPosts/MediaPostList";
 import Navigation from "./components/navigation/Navigation";
 
 function App() {
   let routes = (
     <Switch>
       <Route path="/" exact component={MainContainer} />
-      <Route path="/posts" component={PostList} />
+      <Route path="/media-posts" component={MediaPostList} />
       <Redirect to="/" />
     </Switch>
   );

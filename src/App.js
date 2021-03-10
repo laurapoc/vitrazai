@@ -7,6 +7,7 @@ import MainContainer from "./containers/MainContainer";
 import MediaPostList from "./components/posts/MediaPosts/MediaPostList";
 import Navigation from "./components/navigation/Navigation";
 import FullArticlePost from "./components/posts/fullArticlePost/FullArticlePost";
+import FullMediaPost from "./components/posts/fullMediaPost/FullMediaPost";
 
 function App() {
   let routes = (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" exact component={MainContainer} />
       <Route path="/media-posts" component={MediaPostList} />
       <Route path="/full-article" component={FullArticlePost} />
+      <Route path="/media-post/:slug" component={FullMediaPost} />
       <Redirect to="/" />
     </Switch>
   );
@@ -22,6 +24,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Suspense>{routes}</Suspense>
+
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.ArticlePostList ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ArticlePostList li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 32%;
+  padding: 2%;
+}
+
+.ArticlePostList h1 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}

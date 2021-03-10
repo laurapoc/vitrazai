@@ -17,13 +17,14 @@ export default class MediaPostList extends Component {
   }
 
   render() {
-    // first time renders empty array. How to prevent it (or shoud I prevent this)?
     // console.log(this.state.posts);
     const postList = this.state.posts.map((post) => (
       <li key={post.id}>
         <Post
           title={post.title.rendered}
           imageSource={post.media_details.sizes.medium.source_url}
+          largeImagesource={post.media_details.sizes.full.source_url}
+          slug={post.slug}
         />
       </li>
     ));

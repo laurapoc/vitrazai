@@ -8,7 +8,6 @@ export default class MainContainer extends Component {
     return (
       <div>
         <ImageSlide />
-        <h1>hi from MainContainer.js</h1>
         <ArticlePostList />
       </div>
     );

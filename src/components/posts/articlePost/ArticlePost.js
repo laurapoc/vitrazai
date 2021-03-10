@@ -6,11 +6,12 @@ export default class ArticlePost extends Component {
     maxLength: 250,
   };
 
+
   render() {
     const { title, content } = this.props;
     return (
       <div>
-        <h3>{title}</h3>
+        <h3>{title.toUpperCase()}</h3>
         {content.length > this.props.maxLength ? (
           <div>
             {`${content.substring(0, this.props.maxLength)}...`}
@@ -26,6 +27,9 @@ export default class ArticlePost extends Component {
           </div>
         ) : (
           <p>{content}</p>
+
+   
+
         )}
       </div>
     );

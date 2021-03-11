@@ -8,7 +8,8 @@ export default class ArticlePost extends Component {
 
 
   render() {
-    const { title, content } = this.props;
+    console.log(this.props) 
+    const { title, content, id } = this.props;
     return (
       <div>
         <h3>{title.toUpperCase()}</h3>
@@ -18,7 +19,7 @@ export default class ArticlePost extends Component {
 
             <Link
               to={{
-                pathname: "/full-article",
+                pathname: this.props.match.url +  `/${id}`,
                 state: { title: title, content: content },
               }}
             >

@@ -25,6 +25,7 @@ export default class MediaPostList extends Component {
           imageSource={post.media_details.sizes.medium.source_url}
           largeImagesource={post.media_details.sizes.full.source_url}
           slug={post.slug}
+          {...this.props}
         />
       </li>
     ));

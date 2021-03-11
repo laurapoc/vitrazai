@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 export default class MediaPost extends Component {
   render() {
-    const { largeImagesource, title } = this.props;
+    const { largeImagesource, title, slug } = this.props;
     return (
       <div>
         <Link
           to={{
-            pathname: `/media-post/${this.props.slug}`,
+            pathname: this.props.match.url +  `/${slug}`,
             state: { largeImageSource: largeImagesource, title: title },
           }}
         >

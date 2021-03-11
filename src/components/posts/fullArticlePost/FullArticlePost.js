@@ -3,7 +3,7 @@ import React from "react";
 
 const FullArticlePost = (props) => {
   //   const { title, content } = this.props;
-  console.log("full article", props.location.state);
+  console.log("full article", props.match);
 
   const { title, content } = props.location.state;
 

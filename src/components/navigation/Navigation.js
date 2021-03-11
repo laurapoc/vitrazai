@@ -6,9 +6,10 @@ const Navigation = () => {
   return (
     <ul className={classes.nav}>
       <NavigationItem link="/" exact>
-        HOME
+        TITULINIS
       </NavigationItem>
-      <NavigationItem link="/media-posts">POSTS</NavigationItem>
+      <NavigationItem link="/media-posts">GALERIJA</NavigationItem>
+      <NavigationItem link="/articles">STRAIPSNIAI</NavigationItem>
     </ul>
   );
 };

@@ -31,11 +31,7 @@ export default class MediaPostList extends Component {
     ));
     return (
       <div>
-        <h2>This is PostList.js component</h2>
-
-        <ul className={classes.MediaPostList} style={{ listStyle: "none" }}>
-          {postList}
-        </ul>
+        <ul className={classes.MediaPostList}>{postList}</ul>
       </div>
     );
   }

@@ -1,3 +1,4 @@
+import classes from "./FullMediaPost.module.css";
 import React, { Fragment } from "react";
 
 
@@ -9,13 +10,13 @@ const FullMediaPost = (props) => {
   };
 
   return (
-    <Fragment>
-      <div>
+    <Fragment >
+      <div className={classes.FullMediaPost}>
         <h1>{title}</h1>
         <img src={largeImageSource} alt="" />
       </div>
 
-      <button onClick={buttonClickHandler}>Go Back</button>
+      <button className={classes.FullMediaPostButton} onClick={buttonClickHandler}>Grįžti į galeriją</button>
     </Fragment>
   );
 };

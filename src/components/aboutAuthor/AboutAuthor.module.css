@@ -1,0 +1,37 @@
+.AboutAuthor {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutAuthor h1{
+text-transform: uppercase;
+}
+
+.AboutAuthorContainer {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    border: 10px solid rgba(239, 225, 225, 0.2);
+    box-shadow: 2px 5px 4px #7a766a;
+    
+}
+
+.AboutAuthorContainer img {
+    width: 100%;
+}
+
+.AboutAuthorchildren{
+    margin: 20px;
+    width: calc(100% - 5%);
+}
+.AboutAuthorchildren p{
+    margin: 0;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1300px) {
+    .AboutAuthorContainer {
+      width: 90%;
+    }
+  }

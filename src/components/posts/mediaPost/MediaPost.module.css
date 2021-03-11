@@ -1,0 +1,9 @@
+.MediaPost h3 {
+  text-transform: uppercase;
+  color: rgb(44, 42, 42);
+}
+.MediaPost h3:hover {
+  color: rgb(92, 87, 87);
+}
+
+

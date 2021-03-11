@@ -3,7 +3,6 @@ import axios from "axios";
 import ImageGallery from "react-image-gallery";
 import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
 import "./ImageSlide.css"
-// import classes from "./ImageSlide.module.css";
 
 export default class ImageSlide extends Component {
   state = {

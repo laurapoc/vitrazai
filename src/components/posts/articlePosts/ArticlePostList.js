@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 import ArticlePost from "../articlePost/ArticlePost";
 import classes from "./ArticlePostList.module.css";
 
@@ -23,6 +24,7 @@ export default class ArticlePostList extends Component {
           title={post.title.rendered}
           // imageSource={post.media_details.sizes.medium.source_url}
           content={post.content.rendered}
+          shortContent={post.excerpt.rendered}
           id={post.id}
           {...this.props}
 

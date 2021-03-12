@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
+import { articlePostReplacer } from "../../../services/replacers";
 
 export default class ArticlePost extends Component {
   static defaultProps = {
@@ -9,27 +10,18 @@ export default class ArticlePost extends Component {
 
   render() {
     let parsingParams = {
-      replace: (domNode) => {
-        if (domNode.attribs && domNode.attribs.href !== undefined) {
-          domNode.attribs.href = "";
-        } else if (domNode.name === "h1" || domNode.name === "h2") {
-          return <></>;
-        } else if (domNode.name === "p") {
-        }
-      },
+      replace: articlePostReplacer,
     };
     const { title, content, id } = this.props;
     return (
       <div>
         <h3>{title.toUpperCase()}</h3>
-
         {content.length > this.props.maxLength ? (
           <div>
             {parse(
               `${content.substring(0, this.props.maxLength)}...`,
               parsingParams
             )}
-
             <Link
               to={{
                 pathname: this.props.match.url + `/${id}`,

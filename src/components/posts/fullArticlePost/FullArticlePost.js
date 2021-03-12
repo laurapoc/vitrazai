@@ -1,17 +1,13 @@
 import React from "react";
 import parse from "html-react-parser";
 import classes from "./FullArticlePost.module.css";
+import { fullArticlePostReplacer } from "../../../services/replacers/replacers";
 
 const FullArticlePost = (props) => {
   const { title, content } = props.location.state;
 
   let parsingParams = {
-    replace: (domNode) => {
-      if (domNode.attribs && domNode.attribs.href !== undefined) {
-        domNode.attribs.href = "";
-      } else if (domNode.name === "article") {
-      }
-    },
+    replace: fullArticlePostReplacer,
   };
 
   return (

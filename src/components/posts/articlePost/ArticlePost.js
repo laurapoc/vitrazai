@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
-import { articlePostReplacer } from "../../../services/replacers";
+import { articlePostReplacer } from "../../../services/replacers/replacers";
 
 export default class ArticlePost extends Component {
   static defaultProps = {

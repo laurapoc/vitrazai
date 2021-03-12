@@ -1,6 +1,6 @@
-import axios from "axios";
 import React, { Component } from "react";
 import Post from "../mediaPost/MediaPost";
+import { getData } from "../../../services/data/data";
 
 import classes from "./MediaPostList.module.css";
 
@@ -10,10 +10,7 @@ export default class MediaPostList extends Component {
   };
 
   componentDidMount() {
-    axios.get("https://vitrazai.lt/wp-json/wp/v2/media").then((res) => {
-      const posts = res.data;
-      this.setState({ posts: posts });
-    });
+    getData("media").then((posts) => this.setState({ posts: posts }));
   }
 
   render() {

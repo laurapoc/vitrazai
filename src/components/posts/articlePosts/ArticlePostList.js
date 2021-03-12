@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { getData } from "../../../services/data/data";
 
 import ArticlePost from "../articlePost/ArticlePost";
 import classes from "./ArticlePostList.module.css";
@@ -10,10 +10,7 @@ export default class ArticlePostList extends Component {
   };
 
   componentDidMount() {
-    axios.get("https://vitrazai.lt/wp-json/wp/v2/posts").then((res) => {
-      const posts = res.data;
-      this.setState({ posts: posts });
-    });
+    getData("posts").then((posts) => this.setState({ posts: posts }));
   }
 
   render() {

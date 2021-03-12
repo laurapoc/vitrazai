@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 import "./App.css";
 import MainContainer from "./containers/MainContainer";
-import MediaPostList from "./components/posts/MediaPosts/MediaPostList";
+import MediaPostList from "./components/posts/mediaPosts/MediaPostList";
 import Navigation from "./components/navigation/Navigation";
 import FullArticlePost from "./components/posts/fullArticlePost/FullArticlePost";
 import FullMediaPost from "./components/posts/fullMediaPost/FullMediaPost";

@@ -3,9 +3,6 @@ import parse from "html-react-parser";
 import classes from "./FullArticlePost.module.css";
 
 const FullArticlePost = (props) => {
-  //   const { title, content } = this.props;
-  console.log("full article", props);
-
   const { title, content } = props.location.state;
 
   let parsingParams = {
@@ -13,7 +10,6 @@ const FullArticlePost = (props) => {
       if (domNode.attribs && domNode.attribs.href !== undefined) {
         domNode.attribs.href = "";
       } else if (domNode.name === "article") {
-        console.log(domNode);
       }
     },
   };

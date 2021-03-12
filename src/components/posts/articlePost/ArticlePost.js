@@ -15,27 +15,20 @@ export default class ArticlePost extends Component {
         } else if (domNode.name === "h1" || domNode.name === "h2") {
           return <></>;
         } else if (domNode.name === "p") {
-          console.log(domNode);
         }
       },
     };
-    // console.log(this.props)
     const { title, content, id } = this.props;
     return (
       <div>
         <h3>{title.toUpperCase()}</h3>
-        {/* {parse(`<p>${shortContent}</p>`, parsingParams)}
-        <Link
-              to={{
-                pathname: this.props.match.url +  `/${id}`,
-                state: { title: title, content: content },
-              }}
-            >
-              Read more
-            </Link> */}
+
         {content.length > this.props.maxLength ? (
           <div>
-            {parse(`${content.substring(0, this.props.maxLength)}...`, parsingParams)}
+            {parse(
+              `${content.substring(0, this.props.maxLength)}...`,
+              parsingParams
+            )}
 
             <Link
               to={{

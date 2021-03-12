@@ -17,7 +17,6 @@ export default class MediaPostList extends Component {
   }
 
   render() {
-    // console.log(this.state.posts);
     const postList = this.state.posts.map((post) => (
       <li key={post.id}>
         <Post

@@ -11,6 +11,7 @@
     width: 100%;
     box-sizing: border-box;
     display: block;
+    transition: 0.25s;
   }
 
   .NavigationItem a:hover,

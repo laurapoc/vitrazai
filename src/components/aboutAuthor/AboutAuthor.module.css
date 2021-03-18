@@ -12,8 +12,9 @@ text-transform: uppercase;
     display: flex;
     margin: 0 auto;
     width: 70%;
-    border: 10px solid rgba(239, 225, 225, 0.2);
-    box-shadow: 2px 5px 4px #7a766a;
+    /* border: 10px solid rgba(239, 225, 225, 0.2); */
+    /* box-shadow: 2px 5px 4px #7a766a; */
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
     
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 import { articlePostReplacer } from "../../../services/replacers/replacers";
+import classes from "./ArticlePost.module.css";
 
 export default class ArticlePost extends Component {
   static defaultProps = {
@@ -14,14 +15,11 @@ export default class ArticlePost extends Component {
     };
     const { title, content, id } = this.props;
     return (
-      <div>
+      <div className={classes.ArticlePost}>
         <h3>{title.toUpperCase()}</h3>
         {content.length > this.props.maxLength ? (
           <div>
-            {parse(
-              `${content.substring(0, this.props.maxLength)}...`,
-              parsingParams
-            )}
+            {parse(`${content.substring(0, this.props.maxLength)}...`, parsingParams)}
             <Link
               to={{
                 pathname: this.props.match.url + `/${id}`,

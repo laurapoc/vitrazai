@@ -6,12 +6,17 @@
 
 .AboutAuthor h1{
 text-transform: uppercase;
+color: black;
+-webkit-text-fill-color: rgb(210, 215, 219); /* Will override color (regardless of order) */
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: black;
 }
 
 .AboutAuthorContainer {
     display: flex;
     margin: 0 auto;
     width: 70%;
+    background-color: rgb(214, 214, 245);
     /* border: 10px solid rgba(239, 225, 225, 0.2); */
     /* box-shadow: 2px 5px 4px #7a766a; */
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);

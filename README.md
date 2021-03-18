@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+how to start
+### `git clone https://github.com/ValerasNarbutas/vitrazai.git`
+
+
+
+
 ### `npm start`
 
 Runs the app in the development mode.\

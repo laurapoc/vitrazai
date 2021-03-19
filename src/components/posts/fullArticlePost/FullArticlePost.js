@@ -7,12 +7,14 @@ const FullArticlePost = (props) => {
   const { title, content } = props.location.state;
 
   let parsingParams = {
+    // Replace hrefs into empty elements
     replace: fullArticlePostReplacer,
   };
 
   return (
     <div className={classes.FullArticlePost}>
       <h3>{title}</h3>
+      {/* Convert HTML string into React element */}
       {parse(`<p>${content}</p>`, parsingParams)}
     </div>
   );

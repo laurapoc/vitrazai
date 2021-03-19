@@ -10,6 +10,7 @@ export default class ArticlePost extends Component {
   };
 
   render() {
+    // Rreplace hrefs and headers into empty elements
     let parsingParams = {
       replace: articlePostReplacer,
     };
@@ -19,6 +20,7 @@ export default class ArticlePost extends Component {
         <h3>{title.toUpperCase()}</h3>
         {content.length > this.props.maxLength ? (
           <div>
+            {/* Convert HTML string into React element */}
             {parse(`${content.substring(0, this.props.maxLength)}...`, parsingParams)}
             <Link
               to={{
@@ -30,6 +32,7 @@ export default class ArticlePost extends Component {
             </Link>
           </div>
         ) : (
+          // Convert HTML string into React element
           parse(`<p>${content}</p>`, parsingParams)
         )}
       </div>

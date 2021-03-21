@@ -10,6 +10,7 @@ const Navigation = () => {
       </NavigationItem>
       <NavigationItem link="/media-posts">GALERIJA</NavigationItem>
       <NavigationItem link="/articles">STRAIPSNIAI</NavigationItem>
+      <NavigationItem link="/test-gallery">TEST-GALERIJA</NavigationItem>
     </ul>
   );
 };

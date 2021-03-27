@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
-import { articlePostReplacer } from "../../../services/replacers/replacers";
+import { articlePostReplacer } from "../../../utility/replacers/replacers";
 import classes from "./ArticlePost.module.css";
 
 export default class ArticlePost extends Component {
@@ -11,6 +11,7 @@ export default class ArticlePost extends Component {
 
   render() {
     // Rreplace hrefs and headers into empty elements
+    // otherwise links go to the external source
     let parsingParams = {
       replace: articlePostReplacer,
     };

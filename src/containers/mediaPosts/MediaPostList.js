@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Post from "../mediaPost/MediaPost";
-import { getData } from "../../../services/data/data";
+import Post from "../../components/posts/mediaPost/MediaPost";
+import { getData } from "../../services/data/data";
 
 import classes from "./MediaPostList.module.css";
 

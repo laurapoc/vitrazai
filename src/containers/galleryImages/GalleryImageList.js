@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import GalleryImage from "../galleryImage/GalleryImage";
+import GalleryImage from "../../components/posts/testGallery/galleryImage/GalleryImage";
 
 export default class GalleryImageList extends Component {
   state = {

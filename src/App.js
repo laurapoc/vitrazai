@@ -12,8 +12,21 @@ import FullArticlePost from "./components/posts/fullArticlePost/FullArticlePost"
 import FullMediaPost from "./components/posts/fullMediaPost/FullMediaPost";
 import ArticlePostList from "./containers/articlePosts/ArticlePostList";
 import GalleryImageList from "./containers/galleryImages/GalleryImageList";
+import Spinner from "./components/spinner/Spinner";
 
 export default class App extends Component {
+  state = {
+    loading: true,
+  };
+
+  async loadData() {
+    this.setState({
+      loading: false,
+    });
+  }
+  componentDidMount() {
+    this.loadData();
+  }
 
   render() {
     let routes = (
@@ -27,10 +40,20 @@ export default class App extends Component {
         <Redirect to="/" />
       </Switch>
     );
+
+    let showContent = this.state.loading ? (
+      <Suspense>
+        <Spinner />
+      </Suspense>
+    ) : (
+      <Suspense>{routes}</Suspense>
+    );
+
     return (
       <div className="App">
         <Navigation />
-        <Suspense>{routes}</Suspense>
+        {/* <Suspense>{routes}</Suspense> */}
+        {showContent}
       </div>
     );
   }

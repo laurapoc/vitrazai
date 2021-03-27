@@ -1,5 +1,5 @@
 import classes from "./FullMediaPost.module.css";
-import React, { Fragment } from "react";
+import React, {  Fragment } from "react";
 
 
 const FullMediaPost = (props) => {

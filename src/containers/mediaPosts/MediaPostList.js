@@ -29,11 +29,11 @@ export default class MediaPostList extends Component {
         />
       </li>
     ));
-    let returnedContent = this.state.loading ? (
+    let showContent = this.state.loading ? (
       <Spinner />
     ) : (
       <ul className={classes.MediaPostList}>{postList}</ul>
     );
-    return <div>{returnedContent}</div>;
+    return <div>{showContent}</div>;
   }
 }

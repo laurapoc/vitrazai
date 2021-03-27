@@ -3,14 +3,18 @@ import { getData } from "../../services/data/data";
 
 import ArticlePost from "../../components/posts/articlePost/ArticlePost";
 import classes from "./ArticlePostList.module.css";
+import Spinner from "../../components/spinner/Spinner";
 
 export default class ArticlePostList extends Component {
   state = {
     posts: [],
+    loading: false,
   };
 
   componentDidMount() {
-    getData("posts").then((posts) => this.setState({ posts: posts }));
+    this.setState({ loading: true }, () => {
+      getData("posts").then((posts) => this.setState({ posts: posts, loading: false }));
+    });
   }
 
   render() {
@@ -26,11 +30,14 @@ export default class ArticlePostList extends Component {
       </li>
     ));
 
-    return (
-      <div className={classes.ArticlePostList}>
+    const showContent = this.state.loading ? (
+      <Spinner />
+    ) : (
+      <div>
         <h1>Straipsniai</h1>
         <ul>{ArticlePostList}</ul>
       </div>
     );
+    return <div className={classes.ArticlePostList}>{showContent}</div>;
   }
 }

@@ -20,9 +20,9 @@ export default class App extends Component {
   };
 
   async loadData() {
-    this.setState({
-      loading: false,
-    });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 300);
   }
   componentDidMount() {
     this.loadData();

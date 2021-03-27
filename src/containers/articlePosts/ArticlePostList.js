@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { getData } from "../../../services/data/data";
+import { getData } from "../../services/data/data";
 
-import ArticlePost from "../articlePost/ArticlePost";
+import ArticlePost from "../../components/posts/articlePost/ArticlePost";
 import classes from "./ArticlePostList.module.css";
 
 export default class ArticlePostList extends Component {

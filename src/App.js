@@ -3,13 +3,13 @@ import { Route, Redirect } from "react-router-dom";
 import { Suspense } from "react";
 
 import "./App.css";
-import MainContainer from "./containers/MainContainer";
-import MediaPostList from "./components/posts/mediaPosts/MediaPostList";
+import MainContainer from "./containers/main/MainContainer";
+import MediaPostList from "./containers/mediaPosts/MediaPostList";
 import Navigation from "./components/navigation/Navigation";
 import FullArticlePost from "./components/posts/fullArticlePost/FullArticlePost";
 import FullMediaPost from "./components/posts/fullMediaPost/FullMediaPost";
-import ArticlePostList from "./components/posts/articlePosts/ArticlePostList";
-import GalleryImageList from "./components/posts/testGallery/galleryImages/GalleryImageList";
+import ArticlePostList from "./containers/articlePosts/ArticlePostList";
+import GalleryImageList from "./containers/galleryImages/GalleryImageList";
 
 function App() {
   let routes = (

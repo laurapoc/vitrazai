@@ -8,7 +8,7 @@ export default class MediaPost extends Component {
     return (
       <div className={classes.MediaPost}>
         <Link style={{ textDecoration: 'none' }}
-          to={{
+         exact to={{
             pathname: this.props.match.url + `/${slug}`,
             state: { largeImageSource: largeImagesource, title: title },
           }}

@@ -24,7 +24,7 @@ export default class ArticlePost extends Component {
             {/* Convert HTML string into React element */}
             {parse(`${content.substring(0, this.props.maxLength)}...`, parsingParams)}
             <Link
-              to={{
+              exact to={{
                 pathname: this.props.match.url + `/${id}`,
                 state: { title: title, content: content },
               }}

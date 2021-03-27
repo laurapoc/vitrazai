@@ -14,12 +14,12 @@ import GalleryImageList from "./containers/galleryImages/GalleryImageList";
 function App() {
   let routes = (
     <Switch>
-      <Route path="/articles" exact component={ArticlePostList} />
-      <Route path="/" exact component={MainContainer} />
-      <Route path="/media-posts" exact component={MediaPostList} />
-      <Route path="/test-gallery" exact component={GalleryImageList} />
-      <Route path="/articles/:id" component={FullArticlePost} />
-      <Route path="/media-posts/:slug" component={FullMediaPost} />
+      <Route exact path="/articles" component={ArticlePostList} />
+      <Route exact path="/" component={MainContainer} />
+      <Route exact path="/media-posts" component={MediaPostList} />
+      <Route exact path="/test-gallery" component={GalleryImageList} />
+      <Route exact path="/articles/:id" component={FullArticlePost} />
+      <Route exact path="/media-posts/:slug" component={FullMediaPost} />
       <Redirect to="/" />
     </Switch>
   );

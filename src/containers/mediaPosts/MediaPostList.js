@@ -13,11 +13,14 @@ export default class MediaPostList extends Component {
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      getData("media").then((posts) => this.setState({ posts: posts, loading: false }));
+      getData("media").then((posts) =>
+        this.setState({ posts: posts, loading: false })
+      );
     });
   }
 
   render() {
+    console.log(this.state.posts);
     const postList = this.state.posts.map((post) => (
       <li key={post.id}>
         <Post

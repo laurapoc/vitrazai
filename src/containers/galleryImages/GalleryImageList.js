@@ -24,7 +24,7 @@ export default class GalleryImageList extends Component {
   }
 
   render() {
-    console.log(this.state.gallery);
+    // console.log(this.state.gallery);
     const galleryItemList = this.state.gallery.map((item) => (
       <GalleryImage
         key={item.id}

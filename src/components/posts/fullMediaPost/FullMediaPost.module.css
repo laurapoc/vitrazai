@@ -1,5 +1,5 @@
 .FullMediaPost img {
-  max-height: 70vh;
+  /* max-height: 70vh; */
 }
 
 .FullMediaPostButton {
@@ -18,6 +18,41 @@
   color: rgb(13, 15, 41);
 }
 
-.PopImage {
+.PopImageHide {
+  display: none;
+  z-index: 0;
+  opacity: 0;
+}
 
+.PopImageShow {
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 19, 19, 0.9);
+  z-index: 10;
+  position: absolute;
+  animation: fadeIn 1s;
+  /* -webkit-box-align:center;
+    -webkit-box-pack:center;
+    display:-webkit-box; */
+}
+
+.PopImageShow img {
+ max-height: 90%;
+ max-width: 90%;
+  position: relative;
+ margin: 5% 0 0 0;
+
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

@@ -26,7 +26,8 @@ export default class MediaPostList extends Component {
         <Post
           title={post.title.rendered}
           imageSource={post.media_details.sizes.medium.source_url}
-          largeImagesource={post.media_details.sizes.full.source_url}
+          largeImagesource={post.media_details.sizes.medium_large.source_url}
+          fullImagesource={post.media_details.sizes.full.source_url}
           slug={post.slug}
           {...this.props}
         />

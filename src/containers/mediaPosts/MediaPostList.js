@@ -13,9 +13,7 @@ export default class MediaPostList extends Component {
 
   componentDidMount() {
     this.setState({ loading: true }, () => {
-      getData("media").then((posts) =>
-        this.setState({ posts: posts, loading: false })
-      );
+      getData("media").then((posts) => this.setState({ posts: posts, loading: false }));
     });
   }
 
@@ -33,11 +31,7 @@ export default class MediaPostList extends Component {
         />
       </li>
     ));
-    let showContent = this.state.loading ? (
-      <Spinner />
-    ) : (
-      <ul className={classes.MediaPostList}>{postList}</ul>
-    );
+    let showContent = this.state.loading ? <Spinner /> : <ul className={classes.MediaPostList}>{postList}</ul>;
     return <div>{showContent}</div>;
   }
 }

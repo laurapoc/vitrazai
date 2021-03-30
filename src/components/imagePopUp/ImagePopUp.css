@@ -1,0 +1,28 @@
+.PopUpImage {
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(20, 19, 19, 0.9);
+  z-index: 10;
+  position: fixed;
+  animation: fadeIn 1s;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  top: 0;
+  left: 0;
+}
+
+.PopUpImage img {
+  max-width: 900px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
